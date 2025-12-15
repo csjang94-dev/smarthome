@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>스마트홈</title>
+</head>
+<body>
+    <header><h1>스마트홈</h1></header>
+    <nav>
+        <a href="">login</a>
+    </nav>
+    <section>
+        <div id="section_view">
+            <div>
+                <span class="view_left">온도</span><span id="temp" class="view_right">15</span>
+            </div>
+            <div>
+                <span class="view_left">습도</span><span id="humi" class="view_right">17</span>
+            </div>
+            <div>
+                <spean class="view_left">조도</span><span id="lux" class="view_right">30</span>
+            </div>
+        </div>
+
+        <div id="section_mod">
+            <form>
+                
+                <div>
+                    <input type="radio" name="mod">
+                    <label for="">자동 모드</label>
+                    <div>(자동으로 방안 환경을 조절합니다.)</div>
+                </div>
+
+                <div>
+                    <input type="radio" name="mod">
+                    <label for="">유저 모드</label>
+                    <div>(우리는 항상 유저의 허락을 받습니다.)</div>
+                </div>
+                
+            </form>
+        </div>
+    </section>
+    <footer></footer>
+    <script src="script.js"></script>
+</body>
+</html>
