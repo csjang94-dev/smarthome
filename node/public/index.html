@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/style.css">
+    <title>스마트홈</title>
+</head>
+<body>
+    <header><a href="" id="header_title">스마트홈</a></header>
+    <nav>
+        <div id="nav_login">
+            <a href="" id="login">login</a>
+        </div>
+        
+    </nav>
+    <section>
+        <div id="section_top">
+            <div id="main_top" class="main_hidden">
+                 <div>
+                    <span class="top_left">온도</span><span id="temp" class="top_right">15</span>
+                </div>
+                <div>
+                    <span class="top_left">습도</span><span id="humi" class="top_right">17</span>
+                </div>
+                <div>
+                    <spean class="top_left">조도</span><span id="lux" class="top_right">30</span>
+                </div>
+            </div>
+           
+            <div id="login_top" class="login_hidden">
+                <div><label for="">ID</label><input type="text" placeholder="아이디를 입력하세요." id="input_id"></div>
+                <div><label for="">PW</label><input type="text" placeholder="비밀번호를 입력하세요." id="input_pw"></div>
+            </div>
+
+            <div id="signup_top" class="signup_hidden">aaa</div>
+
+        </div>
+
+        <div id="section_bottom">
+            <form id="main_bottom" class="main_hidden">
+                
+                <div>
+                    <input type="radio" name="mod">
+                    <label for="">자동 모드</label>
+                    <div>(자동으로 방안 환경을 조절합니다.)</div>
+                </div>
+
+                <div>
+                    <input type="radio" name="mod">
+                    <label for="">유저 모드</label>
+                    <div>(우리는 항상 유저의 허락을 받습니다.)</div>
+                </div>
+                
+            </form>
+
+            <div id="login_bottom" class="login_hidden">
+                <span class="login_bottom_btn"><button id="login_btn">로그인</button></span>
+                <span class="login_bottom_btn"><button id="signup_btn">회원가입</button></span>
+            </div>
+
+            <div id="signup_bottom" class="signup_hidden">qqq</div>
+
+        </div>
+    </section>
+    <footer></footer>
+    <script src="server.js"></script>
+    <script src="public/main.js"></script>
+    <script src="public/login.js"></script>
+    <script src="public/signup.js"></script>
+    
+</body>
+</html>
