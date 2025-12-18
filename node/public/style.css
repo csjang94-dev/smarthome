@@ -3,6 +3,7 @@
 }
 
 body{
+    background-color: #b5cce7;
     display: grid;
     height: 100vh;
     grid-template-areas: 
@@ -24,6 +25,8 @@ section { grid-area: section; }
 footer { grid-area: footer; }
 
 header{
+    width: 100%;
+    background-color: #e49dae;
     text-align: center;
     margin: auto;
     padding: 20px;
@@ -31,20 +34,21 @@ header{
 
 #header_title{
     font-size: 3rem;
-    color: black;
+    font-weight: bold;
+    color: rgb(207, 52, 99);
     text-decoration: none;
 }
 
 
 nav{
-    background-color: rgb(158, 172, 172);
+    background-color: #604b63;
     padding: 10px 40px;
     text-align: right;
     margin-bottom: 30px;
 }
 
 nav a{
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -53,29 +57,47 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    width: 100%;
+    margin: auto;
 }
 
 #section_top, #section_bottom{
-    margin: 20px;
-    height: auto;
-    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 20px;
+    width: 1200px;
 }
 
 
-#section_top .top_right{
-    margin-left: 40px;
-    border-radius: 5px;
+.mod_text{
+    font-size: 15px;
+    padding: 10px;
+}
+
+#auto_div{
+    padding: 40px 0 10px 0;
+}
+
+#confirm_div{
+    padding: 10px 0 40px 0;
 }
 
 #main_top > div{
-    height: auto;
-    margin: 40px 0;
-    padding: 20px 40px;
+    margin: 20px 0;
+}
+
+.main_top_data{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+#main_top_title{
+    font-size: 30px;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -88,6 +110,7 @@ form{
 
 
 #main_top{
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,6 +131,29 @@ form{
     display: block;
 }
 
+hr{
+    border: none;       /* 기본 테두리 제거 */
+    height: 5px;        /* 선의 굵기 (원하는 수치로 조절) */
+    background-color: #b5cce7;
+}
+
+#connected_device_title{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#connected_device{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.device_state{
+    text-align: center;
+}
+
 
 #login:hover {
     color: blueviolet;
@@ -119,6 +165,7 @@ form{
 }
 
 #login_top{
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -143,7 +190,14 @@ span{
     padding: 10px;
 }
 
-#login_top.login_hidden{
+.triangle_top{
+    
+}
+.triangle_bottom{
+    
+}
+
+#login_top.login_hidden, #login_bottom.login_hidden{
     display: none;
 }
 
@@ -151,10 +205,9 @@ span{
     padding: 5px 20px;
 }
 
-
-
-#login_bottom.login_hidden{
-    display: none;
+#title_login, #signup_title{
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .login_bottom_btn button{
@@ -169,9 +222,48 @@ span{
     font-weight: bold;
 }
 
-#signup_top, #signup_bottom{
-    display: block;
-    background-color: red;
+#signup_title{
+    text-align: center;
+}
+
+.signup_info_title{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.signup_input{
+    width: 100%;
+    margin-left: auto;
+}
+
+#signup_top{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 50%;
+    gap: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+}
+
+#signup_register:hover{
+    background-color: rgb(137, 187, 96);
+    padding: 10px 20px;
+    color: blueviolet;
+    font-weight: bold;
+}
+
+#signup_bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    padding: 10px;
+    width: 50%;
 }
 
 #signup_top.signup_hidden, #signup_bottom.signup_hidden{

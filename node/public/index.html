@@ -7,50 +7,123 @@
     <title>스마트홈</title>
 </head>
 <body>
-    <header><a href="" id="header_title">스마트홈</a></header>
+    <header><a href="" id="header_title">Link House</a></header>
     <nav>
         <div id="nav_login">
-            <a href="" id="login">login</a>
+            <a href="" id="login">로그인</a>
         </div>
         
     </nav>
     <section>
         <div id="section_top">
             <div id="main_top" class="main_hidden">
-                 <div>
-                    <span class="top_left">온도</span><span id="temp" class="top_right">15</span>
+                <div id="main_top_title">실시간 현황</div>
+                 <div class="main_top_data">
+                    <span class="top_left">🌡️[온도] :</span>
+                    <span id="temp" class="top_middle">15</span>
+                    <span>희망온도 : </span>
+                    <span>25</span>
+                    <span>
+                        <button id="top_fst" class="triangle_top">🔺</button>
+                        <button id="bottom_fst" class="triangle_bottom">🔻</button>
+                    </span>
                 </div>
-                <div>
-                    <span class="top_left">습도</span><span id="humi" class="top_right">17</span>
+                <div class="main_top_data">
+                    <span class="top_left">💧[습도] :</span>
+                    <span id="humi" class="top_middle">17</span>
+                    <span>희망습도 : </span>
+                    <span>50</span>
+                    <span>
+                        <button id="top_sec" class="triangle_top">🔺</button>
+                        <button id="bottom_sec" class="triangle_bottom">🔻</button>
+                    </span>
                 </div>
-                <div>
-                    <spean class="top_left">조도</span><span id="lux" class="top_right">30</span>
+                <div class="main_top_data">
+                    <span class="top_left">💡[밝기] :</span>
+                    <span id="lux" class="top_middle">30</span>
+                    <span>희망밝기 : </span>
+                    <span>100</span>
+                    <span>
+                        <button id="top_trd" class="triangle_top">🔺</button>
+                        <button id="bottom_trd" class="triangle_bottom">🔻</button>
+                    </span>
+                </div>
+                <hr>
+                <div id="connected_device_title">연결된 장치</div>
+                <div id="connected_device">
+                    <span>
+                        <div>에어컨</div>
+                        <div id="connected_AC" class="device_state">off</div>
+                    </span>
+                    <span>
+                        <div>히터</div>
+                        <div id="connected_HT" class="device_state">off</div>
+                    </span>
+                    <span>
+                        <div>제습기</div>
+                        <div id="connected_DHF" class="device_state">off</div>
+                    </span>
+                    <span>
+                        <div>가습기</div>
+                        <div id="connected_HF" class="device_state">off</div>
+                    </span>
+                    <span>
+                        <div>조명</div>
+                        <div id="connected_LT" class="device_state">off</div>
+                    </span> 
                 </div>
             </div>
            
             <div id="login_top" class="login_hidden">
+                <div id="title_login">로그인</div>
                 <div><label for="">ID</label><input type="text" placeholder="아이디를 입력하세요." id="input_id"></div>
                 <div><label for="">PW</label><input type="text" placeholder="비밀번호를 입력하세요." id="input_pw"></div>
             </div>
 
-            <div id="signup_top" class="signup_hidden">aaa</div>
+            <div id="signup_top" class="signup_hidden">
+                <div id="signup_title">회원가입</div>
+                
+                <div class="signup_info">
+                    <div class="signup_info_title">로그인 정보</div>
+                    <div><label for="">아이디</label><input class="signup_input" type="text"></div>
+                    <div><label for="">비밀번호</label><input class="signup_input" type="text"></div>
+                    <div><label for="">비밀번호 확인</label><input class="signup_input" type="text"></div>
+                </div>
+                
+                <div class="signup_info">
+                    <div class="signup_info_title">회원 정보</div>
+                    <div><label for="">이름</label><input class="signup_input" type="text"></div>
+                    <div><label for="">휴대전화</label><input class="signup_input" type="text"></div>
+                    <div><label for="">이메일</label><input class="signup_input" type="text"></div>
+                </div>
+                
+                <div class="signup_info">
+                    <div class="signup_info_title">가입 약관 동의</div>
+                    <div><input type="checkbox">모든 약관에 동의합니다. (필수)</div>
+                    <div><input type="checkbox">개인정보 수집 및 이용에 동의합니다. (필수)</div>
+                    <div><input type="checkbox">마케팅 활용 및 광고성 정보 수신에 동의합니다. (선택)</div>
+                </div>
+                
+            </div>
 
         </div>
 
         <div id="section_bottom">
             <form id="main_bottom" class="main_hidden">
-                
-                <div>
-                    <input type="radio" name="mod">
-                    <label for="">자동 모드</label>
-                    <div>(자동으로 방안 환경을 조절합니다.)</div>
-                </div>
+                <div id="form_div">
+                    <div id="auto_div" class="mod_div">
+                        <input type="radio" name="mod">
+                        <label for="">자동 모드</label>
+                        <div class="mod_text">(자동으로 방안 환경을 조절합니다.)</div>
+                    </div>
 
-                <div>
-                    <input type="radio" name="mod">
-                    <label for="">유저 모드</label>
-                    <div>(우리는 항상 유저의 허락을 받습니다.)</div>
+                    <div id="confirm_div" class="mod_div">
+                        <input type="radio" name="mod">
+                        <label for="">유저 모드</label>
+                        <div class="mod_text">(우리는 항상 유저의 허락을 받습니다.)</div>
+                    </div>
                 </div>
+                
                 
             </form>
 
@@ -59,7 +132,9 @@
                 <span class="login_bottom_btn"><button id="signup_btn">회원가입</button></span>
             </div>
 
-            <div id="signup_bottom" class="signup_hidden">qqq</div>
+            <div id="signup_bottom" class="signup_hidden">
+                <span class="login_bottom_btn"><button id="signup_register">가입하기</button></span>
+            </div>
 
         </div>
     </section>
