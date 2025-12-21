@@ -8,6 +8,7 @@ const pool = mysql.createPool({
     user: process.env.DB_USER,         // .env 파일의 DB_USER 값 사용
     password: process.env.DB_PASSWORD, // .env 파일의 DB_PASSWORD 값 사용
     database: process.env.DB_DATABASE, // .env 파일의 DB_DATABASE 값 사용
+    timezone: '+09:00',
     waitForConnections: true, 
     connectionLimit: 10, 
     queueLimit: 0 

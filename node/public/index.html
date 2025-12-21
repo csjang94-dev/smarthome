@@ -85,16 +85,16 @@
                 
                 <div class="signup_info">
                     <div class="signup_info_title">로그인 정보</div>
-                    <div><label for="">아이디</label><input class="signup_input" type="text"></div>
-                    <div><label for="">비밀번호</label><input class="signup_input" type="text"></div>
-                    <div><label for="">비밀번호 확인</label><input class="signup_input" type="text"></div>
+                    <div><label for="">아이디</label><input id="signup_input_id" class="signup_input" type="text"></div>
+                    <div><label for="">비밀번호</label><input id="signup_input_pw" class="signup_input" type="text"></div>
+                    <div><label for="">비밀번호 확인</label><input id="signup_input_pwc" class="signup_input" type="text"></div>
                 </div>
                 
                 <div class="signup_info">
                     <div class="signup_info_title">회원 정보</div>
-                    <div><label for="">이름</label><input class="signup_input" type="text"></div>
-                    <div><label for="">휴대전화</label><input class="signup_input" type="text"></div>
-                    <div><label for="">이메일</label><input class="signup_input" type="text"></div>
+                    <div><label for="">이름</label><input id="signup_input_name" class="signup_input" type="text"></div>
+                    <div><label for="">휴대전화</label><input id="signup_input_phone" class="signup_input" type="text"></div>
+                    <div><label for="">이메일</label><input id="signup_input_email" class="signup_input" type="text"></div>
                 </div>
                 
                 <div class="signup_info">
@@ -139,10 +139,6 @@
         </div>
     </section>
     <footer></footer>
-    <script src="server.js"></script>
-    <script src="public/main.js"></script>
-    <script src="public/login.js"></script>
-    <script src="public/signup.js"></script>
-    
+    <script type="module" src="public/app.js"></script>
 </body>
 </html>
