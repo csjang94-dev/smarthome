@@ -44,7 +44,7 @@ app.post('/sensor/data', async (req, res) => {
     
         } catch (error) {
             res.status(500).json({ 
-                message: `센서값 전달에 문제가 있습니다.`, 
+                message: `센서값 불러오는데 오류가 발생했습니다.`, 
                 error: error.message 
             });
         }
