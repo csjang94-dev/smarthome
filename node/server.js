@@ -2,8 +2,10 @@ import express from 'express';
 import path from 'path';
 import cors from 'cors'
 import { fileURLToPath } from 'url';
-import { getAllSensorData } from './utils.js';
+import { inputDevice } from './utils.js';
 import authRouter from './routes/auth.js';
+import { sendIotCommand } from './utils.js';
+
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -26,7 +28,59 @@ app.get('/', (req, res) => {
 
 app.use('/auth', authRouter);
 
-await getAllSensorData();
+
+
+app.post('/sensor/data', async (req, res) => {
+    try {
+
+        const sensorData = await inputDevice();
+
+        res.json({ 
+            temp_data: sensorData.temp, 
+            humi_data: sensorData.humi,
+            lux_data: sensorData.lux
+        });
+        
+    
+        } catch (error) {
+            res.status(500).json({ 
+                message: `센서값 전달에 문제가 있습니다.`, 
+                error: error.message 
+            });
+        }
+});
+
+app.post('/sensor/command', async (req, res) => {
+    try {
+        console.log("--- 센서 커맨드 시작 ---");
+        const command = req.body;
+        const topic = 'sensor/command'; // 변수 선언 추가
+
+        console.log("AWS IoT Core 전송 진입...");
+        
+        // AWS IoT Core로 명령 전송
+        await sendIotCommand(topic, command);
+        
+        console.log("AWS IoT Core 전송 완료!");
+
+        // ✨ 핵심: 브라우저에게 성공 응답을 보내야 합니다.
+        return res.json({ 
+            success: true, 
+            message: "라즈베리파이로 명령이 전달되었습니다." 
+        });
+
+    } catch (error) {
+        console.error("센서 커맨드 에러:", error);
+        // 이미 헤더가 전송되었는지 확인 후 에러 응답
+        if (!res.headersSent) {
+            return res.status(500).json({ 
+                success: false,
+                message: "센서값 전달에 문제가 있습니다.", 
+                error: error.message 
+            });
+        }
+    }
+});
 
 
 app.listen(PORT, () => {

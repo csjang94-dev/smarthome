@@ -1,8 +1,14 @@
-import {fetchLogin} from './login.js';
-import {fetchSignUP} from './signup.js';
+import {fetchLogin, fetchSignUP, current_data_render, set_data_render, sensorCommand} from './script.js';
 import { appUI, loginUI, signupUI } from './selectors.js';
 
 async function APP() {
+       
+    setInterval(current_data_render, 10000);
+    setInterval(sensorCommand, 10000);
+    set_data_render();
+    
+    
+
     try { 
         appUI.loginTag.addEventListener('click', (event) => {
 
@@ -42,6 +48,9 @@ async function APP() {
             }     
         });
 
+        
+
+      
     } catch (error) {
         console.error('App를 불러오는 중에 문제가 발생했습니다:', error);
     }

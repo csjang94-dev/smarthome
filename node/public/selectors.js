@@ -14,7 +14,32 @@ export const appUI = {
 
     loginBtn: document.getElementById('login_btn'),
     signupBtn: document.getElementById('signup_btn'),
-    signupRegister: document.getElementById('signup_register')
+    signupRegister: document.getElementById('signup_register'),
+
+    // 현재 온도, 습도, 조도
+    currentTemp: document.getElementById('current_temp'),
+    currentHumi: document.getElementById('current_humi'),
+    currentLux: document.getElementById('current_lux'),
+
+    // 커텍트 장치
+    connectedAC: document.getElementById('connected_AC'),
+    connectedHT: document.getElementById('connected_HT'),
+    connectedDHF: document.getElementById('connected_DHF'),
+    connectedHF: document.getElementById('connected_HF'),
+    connectedLT: document.getElementById('connected_LT'),
+
+    // 온도, 습도, 조도 세팅 버튼
+    topFst: document.getElementById('top_fst'),
+    bottomFst: document.getElementById('bottom_fst'),
+    topSec: document.getElementById('top_sec'),
+    bottomSec: document.getElementById('bottom_sec'),
+    topThd: document.getElementById('top_trd'),
+    bottomThd: document.getElementById('bottom_trd'),
+
+    // 온도, 습도, 조도 세팅 값
+    targetTemp: document.getElementById('target_temp'),
+    targetHumi: document.getElementById('target_humi'),
+    targetLux: document.getElementById('target_lux')
 };
 
 

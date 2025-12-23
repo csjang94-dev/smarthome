@@ -1,6 +1,6 @@
 import 'dotenv/config';
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
-import { DynamoDBDocumentClient, PutCommand, ScanCommand } from "@aws-sdk/lib-dynamodb";
+import { DynamoDBDocumentClient, PutCommand, QueryCommand } from "@aws-sdk/lib-dynamodb";
 
 // DynamoDB 클라이언트 설정
 const client = new DynamoDBClient({
@@ -15,4 +15,4 @@ const client = new DynamoDBClient({
 const docClient = DynamoDBDocumentClient.from(client);
 
 // 다른 파일에서 쓸 수 있도록 export
-export { docClient, PutCommand, ScanCommand };
+export { docClient, PutCommand, QueryCommand };
